@@ -1,0 +1,40 @@
+.partners {
+  @include space-top;
+
+  .partner {
+    @include pageCenter;
+    gap: 2rem;
+    cursor: pointer;
+
+     &__box {
+      @include background;
+      text-align: center;
+
+      
+    }
+
+    &-icon{
+        color: color(white);
+        font-size: size(main) * 2;
+        transition: all .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    &-name{
+        color: color(white);
+        font-size: size(large);
+        text-transform: uppercase;
+        transition: all .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  }
+
+  .partner__box:hover .partner-icon{
+    transform: scale(1.1);
+    color: color(red-1);
+  }
+
+  .partner__box:hover .partner-name{
+    transform: scale(.5);
+  }
+
+
+}

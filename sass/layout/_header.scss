@@ -1,0 +1,76 @@
+.header {
+  @include pad;
+  margin: 0 auto;
+  @include flex-center($justify: space-between);
+  @include space-down;
+  overflow: hidden;
+
+  &__content {
+    
+    flex: 1;
+    &--title {
+      font-size: size(main) * 2.5;
+      color: color(white);
+      font-weight: 900;
+    }
+
+    &--sub-title {
+      font-size: size(main) * 2;
+      color: color(red-1);
+        margin-top: -3rem;
+      font-weight: 500;
+    }
+
+    &--description {
+      font-size: size(small);
+      color: color(white);
+      width: 60%;
+      margin-top: 4rem;
+
+      font-weight: 500;
+      margin-bottom: 4rem;
+    }
+
+    &--btn{
+        display: inline-block;
+        color: color(white);
+        padding: 2rem 4rem 2rem 2rem;
+        font-size: size(small);
+        font-weight: 600;
+        background-image: linear-gradient(135deg, color(red-3) 10%, rgba(color(pink-2), .3) 50%);
+  border-radius: .6rem;
+  transition: 0.5s;
+  background-size: 200% auto;
+  text-decoration: none;
+
+  box-shadow: 0 10px 10px rgba(color(red-4), .4);
+
+  &:hover{
+    transform: translateY(-.2rem);
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+        
+        
+
+    }
+  }
+
+  &__img {
+    // flex: 1;
+    // transform: scale(1.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      z-index: 2000;
+      position: absolute;
+      bottom: 0rem;
+      right: 5rem;
+      content: url("/Images/header/Ellipse.png");
+    }
+  }
+}

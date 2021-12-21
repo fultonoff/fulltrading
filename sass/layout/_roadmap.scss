@@ -1,0 +1,49 @@
+.roadmap-section{
+    @include pageCenter;
+    @include space-down;
+    
+    .roadmap{
+        margin-top: 6rem;
+        @include flex-center($align: flex-end);
+        gap: 4rem;
+        width: 100%;
+
+        &-link{
+            @include btn-3;
+            margin-top: 2rem;
+
+            display: block;
+        }
+
+        &-box{
+
+            &__title{
+                font-size: size(small);
+                font-weight: 100;
+                color: color(white);
+                margin-bottom: 2rem;
+
+            }
+
+            &__date{
+                color: color(white);
+                font-weight: 700;
+                font-size: size(medium);
+                margin-bottom: 3rem;
+            }
+
+            &__description{
+                color: rgba(color(white), .47);
+                font-weight: 700;
+                font-size: size(extra-small);
+                margin-bottom: 3rem;
+                font-weight: 500;
+            }
+
+            &__img-box{
+                margin-bottom: 3rem;
+                
+            }
+        }
+    }
+}

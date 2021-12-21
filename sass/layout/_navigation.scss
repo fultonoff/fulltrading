@@ -1,0 +1,31 @@
+.nav{
+    @include flex-center($justify: space-between);
+    @include pad;
+    height: 7rem;
+    // border-bottom: 1px solid rgba(color(white), .1);
+    
+
+
+    &__left{
+        @include flex-center($justify: space-between);
+        gap: 2rem;
+        
+        
+        @include linkStyled;
+        
+        &--logo:link,
+        &--logo:visited{
+            color: color(white);
+            text-decoration: none;
+            margin-right: 5rem;
+            font-size: size(medium);
+            font-weight: 700;
+        }
+        
+    }
+    
+    &__right{
+        @include flex-center($justify: space-between);
+        gap: 3rem;
+    }
+}

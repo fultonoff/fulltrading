@@ -1,0 +1,63 @@
+.numbers {
+  @include flex-center($justify: space-between);
+  @include pageCenter;
+  @include space-down;
+
+  .box {
+    @include border-radius;
+    @include  background;
+    cursor: pointer;
+    &:hover {
+      background: #212429;
+      box-shadow: inset 20px 20px 60px #1c1f23, inset -20px -20px 60px #26292f;
+      transform: scale(1.05);
+    }
+
+    &__icon {
+      font-size: size(main);
+      margin-bottom: 3rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      @include border-radius;
+
+      &--1 {
+        background-color: rgba(color(red-2), 0.1);
+        color: color(red-2);
+      }
+
+      &--2 {
+        background-color: rgba(color(yellow), 0.1);
+        color: color(yellow);
+      }
+
+      &--3 {
+        background-color: rgba(color(orange), 0.1);
+        color: color(orange);
+      }
+
+      &--4 {
+        background-color: rgba(color(green), 0.1);
+        color: color(green);
+      }
+
+      &--5 {
+        background-color: rgba(color(blue), 0.1);
+        color: color(blue);
+      }
+    }
+
+    &__value {
+      font-size: size(large);
+      color: color(white);
+      font-weight: 500;
+      span {
+        font-size: size(small);
+      }
+    }
+
+    &__description {
+      font-size: size(small);
+      color: color(white);
+    }
+  }
+}

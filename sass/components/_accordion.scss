@@ -1,0 +1,26 @@
+.accordion{
+    @include pageCenter;
+    @include space-down;
+    font-family: $main-font;
+    width: 40%;
+
+    .ac{
+        &-header{
+            @include background;
+            color: color(white);
+        }
+    
+        &-trigger{
+            color: color(white);
+            font-family: $main-font;
+        }
+
+        &-panel{
+            color: color(white);
+            background-color: color(white);
+        }
+
+    }
+
+    
+}

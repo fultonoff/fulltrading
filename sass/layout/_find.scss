@@ -1,0 +1,40 @@
+.find-out{
+    
+    .find-box{
+        width: 100%;
+        @include pageCenter;
+        @include space-down;
+        row-gap: 10rem;
+        &__img{
+            // padding: 10rem;
+        }
+
+        &__content{
+            // padding: 10rem;
+            
+
+
+            &--tag{
+                color: color(pink-3);
+                font-size: size(small);
+                font-weight: 500;
+                margin: 2rem 0;
+            }
+            &--title{
+                font-size: size(large);
+                color: color(white);
+                font-weight: 500;
+                margin-bottom: 5rem;
+            }
+
+            &--description{
+                font-size: size(small);
+                color: rgba(color(white), .5);
+                max-width: 70%;
+                margin-bottom: 4rem;
+            }
+
+            
+        }
+    }
+}
