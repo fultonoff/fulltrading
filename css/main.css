@@ -42,7 +42,7 @@ html {
 
 body {
   background-color: #212429;
-  font-family: "Roboto", sans-serrif;
+  font-family: "Roboto", sans-serif, sans-serif;
 }
 
 .grid {
@@ -521,7 +521,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Roboto", sans-serrif;
+  font-family: "Roboto", sans-serif;
   gap: 1rem;
 }
 
@@ -538,7 +538,7 @@ body {
   border: none;
   outline: none;
   padding: 1rem 0;
-  font-family: "Roboto", sans-serrif;
+  font-family: "Roboto", sans-serif;
   border-bottom: 2px solid rgba(42, 57, 59, 0.47);
 }
 
@@ -942,7 +942,7 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   margin-bottom: 15rem;
-  font-family: "Roboto", sans-serrif;
+  font-family: "Roboto", sans-serif;
   width: 40%;
 }
 
@@ -960,7 +960,7 @@ body {
 
 .accordion .ac-trigger {
   color: #ffffff;
-  font-family: "Roboto", sans-serrif;
+  font-family: "Roboto", sans-serif;
 }
 
 .accordion .ac-panel {
