@@ -4,6 +4,7 @@
   @include flex-center($justify: space-between);
   @include space-down;
   height: 90vh;
+  
 
   
 
@@ -13,8 +14,7 @@
     align-items: center;
     justify-content: center;
     
-    height: 100%;
-    width: 100%;
+    
     
   }
 
@@ -107,7 +107,14 @@
     
     
     position: relative;
-    
+    @include respond(m){
+      display: flex;
+      justify-content: center;
+      
+      
+      
+      
+    }
     
 
 
@@ -116,14 +123,15 @@
      
       @include respond(l){
         margin-top: 1rem;
-        width: 100%;
+        // width: 20%;
         
         
       }
 
       @include respond(m){
         margin-top: 1rem;
-        width: 100%;
+        width: 50%;
+        
         
         
       }

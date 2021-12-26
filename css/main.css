@@ -109,8 +109,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100%;
-    width: 100%;
   }
 }
 
@@ -209,17 +207,27 @@ body {
   position: relative;
 }
 
+@media (max-width: 50em) {
+  .header__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media (max-width: 62.5em) {
   .header__img img {
     margin-top: 1rem;
-    width: 100%;
   }
 }
 
 @media (max-width: 50em) {
   .header__img img {
     margin-top: 1rem;
-    width: 100%;
+    width: 50%;
   }
 }
 
