@@ -1,0 +1,22 @@
+//Resposive
+
+
+
+
+@mixin respond($breakpoint) {
+
+    @if($breakpoint == xl){
+        @media (max-width: 81.25em){
+            @content;
+        }
+    }@else if($breakpoint == l){
+        @media (max-width: 62.5em){
+            @content;
+        }
+    }@else if($breakpoint == m){
+        @media (max-width: 50em){
+            @content;
+        }
+    }
+    
+}

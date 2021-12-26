@@ -29,7 +29,8 @@
     <nav class="nav">
       <div class="nav__left">
         <a href="#" class="nav__left nav__left--logo">FullTrading</a>
-
+      </div>
+      <div class="nav__right navigation">
         <ul class="nav__left nav__left--list">
           <li class="nav__left nav__left--item">
             <a href="" class="nav__list nav__left--link">About us</a>
@@ -47,35 +48,18 @@
             <a href="" class="nav__list nav__left--link">Roadmap</a>
           </li>
         </ul>
-      </div>
+      
 
-      <div class="nav__right">
-        <div class="nav__right nav__right--lang">
-          <div id="google_translate_element"></div>
-          <script type="text/javascript">
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement(
-                {
-                  pageLanguage: "en",
-                  includedLanguages: "en,es,pt,ru,zh-CN,fr,ar",
-                  layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                  autoDisplay: false
-                },
-                "google_translate_element"
-              );
-            }
-          </script>
-        </div>
-
-        <div class="nav__right nav__right--mode">
-          <input id="check" class="check" name="check" type="checkbox" />
-          <label for="check">
-            <i class="bi bi-moon-fill icon"></i>
-          </label>
-        </div>
-
+        
         <a class="nav__right nav__right--btn btn" href="">Launch App</a>
+
+        
       </div>
+
+      <button class="nav__right nav__right--toggle">
+        <i class="bi bi-list open"></i>
+        <i class="bi bi-x-lg close"></i>
+      </button>
     </nav>
 
     <!-- End Navigation -->
@@ -196,7 +180,7 @@
           </div>
 
           <div class="find-box__img">
-            <img src="./Images/find out/find-out-2.png" alt="" />
+            <img src="./Images/find out/find-out-1.png" alt="" />
           </div>
         </div>
       </section>
@@ -948,8 +932,6 @@
       <script src="https://unpkg.com/accordion-js@3.1.1/dist/accordion.min.js"></script>
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
       
-      <script src="./JavaScript/map.js"></script>
-    <script src="./JavaScript/translate.js"></script>
     <script src="./JavaScript/slider.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
     <script src="./JavaScript/accordion.js"></script>

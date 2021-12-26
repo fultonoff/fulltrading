@@ -27,5 +27,31 @@
     &__right{
         @include flex-center($justify: space-between);
         gap: 3rem;
+        @include respond(m){
+            display: none;
+        }
+
+
+        &--toggle{
+            background: none;
+            border: none;
+            color: color(white);
+            cursor: pointer;
+            display: none;
+
+            @include respond(m){
+                display: block;
+            }
+
+            i{
+                font-size: size(large);
+            }
+
+            .close{
+                display: none;
+            }
+
+            
+        }
     }
 }

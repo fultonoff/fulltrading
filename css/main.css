@@ -40,6 +40,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 50em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
 body {
   background-color: #212429;
   font-family: "Roboto", sans-serif, sans-serif;
@@ -79,18 +91,53 @@ body {
           justify-content: space-between;
   margin-bottom: 15rem;
   overflow: hidden;
+  height: 90vh;
 }
 
-.header__content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+@media (max-width: 50em) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 0;
+    height: 100%;
+  }
+}
+
+@media (max-width: 50em) {
+  .header__content {
+    margin: 5rem auto;
+    text-align: center;
+  }
 }
 
 .header__content--title {
   font-size: 9.75rem;
   color: #ffffff;
   font-weight: 900;
+}
+
+@media (max-width: 81.25em) {
+  .header__content--title {
+    font-size: 6.25rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .header__content--title {
+    font-size: 7.8rem;
+    margin: 0;
+  }
 }
 
 .header__content--sub-title {
@@ -100,6 +147,20 @@ body {
   font-weight: 500;
 }
 
+@media (max-width: 81.25em) {
+  .header__content--sub-title {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .header__content--sub-title {
+    font-size: 5rem;
+    margin: 0;
+  }
+}
+
 .header__content--description {
   font-size: 1.5rem;
   color: #ffffff;
@@ -107,6 +168,12 @@ body {
   margin-top: 4rem;
   font-weight: 500;
   margin-bottom: 4rem;
+}
+
+@media (max-width: 81.25em) {
+  .header__content--description {
+    font-size: 1rem;
+  }
 }
 
 .header__content--btn {
@@ -140,23 +207,36 @@ body {
 
 .header__img {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: 20px;
+}
+
+.header__img img {
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 50em) {
+  .header__img img {
+    margin-top: 1rem;
+    width: 70%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .header__img::before {
   z-index: 2000;
   position: absolute;
-  bottom: 0rem;
-  right: 5rem;
-  content: url("/Images/header/Ellipse.png");
+  bottom: -10rem;
+  right: 1rem;
+  content: url("/Images/header/Ellipse 2.png");
+}
+
+@media (max-width: 50em) {
+  .header__img::before {
+    display: none;
+  }
 }
 
 .nav {
@@ -227,12 +307,85 @@ body {
   gap: 3rem;
 }
 
+@media (max-width: 50em) {
+  .nav__right {
+    display: none;
+  }
+}
+
+.nav__right--toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .nav__right--toggle {
+    display: block;
+  }
+}
+
+.nav__right--toggle i {
+  font-size: 2.5rem;
+}
+
+.nav__right--toggle .close {
+  display: none;
+}
+
 .find-out .find-box {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
   margin-bottom: 15rem;
   row-gap: 10rem;
+}
+
+@media (max-width: 62.5em) {
+  .find-out .find-box {
+    width: 100%;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .find-out .find-box div:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .find-out .find-box div:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .find-out .find-box div:nth-child(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .find-out .find-box div:nth-child(4) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+@media (max-width: 62.5em) {
+  .find-out .find-box__content {
+    text-align: center;
+    row-gap: 5rem;
+  }
 }
 
 .find-out .find-box__content--tag {
@@ -254,6 +407,32 @@ body {
   color: rgba(255, 255, 255, 0.5);
   max-width: 70%;
   margin-bottom: 4rem;
+}
+
+@media (max-width: 62.5em) {
+  .find-out .find-box__content--description {
+    text-align: center;
+    margin: 2rem auto;
+  }
+}
+
+.find-out .find-box__img {
+  height: 30rem;
+  width: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 62.5em) {
+  .find-out .find-box__img {
+    width: 60%;
+    height: 60%;
+  }
+}
+
+.find-out .find-box__img img {
+  width: 100%;
+  height: 100%;
 }
 
 .btn {
@@ -747,6 +926,19 @@ body {
   margin-bottom: 15rem;
 }
 
+@media (max-width: 62.5em) {
+  .numbers {
+    text-align: center;
+  }
+}
+
+@media (max-width: 50em) {
+  .numbers {
+    overflow-X: scroll;
+    gap: 1rem;
+  }
+}
+
 .numbers .box {
   border-radius: 0.6rem;
   background: #212429;
@@ -769,12 +961,24 @@ body {
           transform: scale(1.05);
 }
 
+@media (max-width: 50em) {
+  .numbers .box {
+    height: 10%;
+  }
+}
+
 .numbers .box__icon {
   font-size: 3.9rem;
   margin-bottom: 3rem;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.6rem;
+}
+
+@media (max-width: 62.5em) {
+  .numbers .box__icon {
+    font-size: 1.5rem;
+  }
 }
 
 .numbers .box__icon--1 {
@@ -810,6 +1014,18 @@ body {
 
 .numbers .box__value span {
   font-size: 1.5rem;
+}
+
+@media (max-width: 50em) {
+  .numbers .box__value span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .numbers .box__value {
+    font-size: 0.8rem;
+  }
 }
 
 .numbers .box__description {

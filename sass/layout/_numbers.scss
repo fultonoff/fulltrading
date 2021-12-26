@@ -3,6 +3,21 @@
   @include pageCenter;
   @include space-down;
 
+  @include respond(l){
+      
+    text-align: center;
+    
+    
+      }
+
+      @include respond(m){
+        // width: 100%;
+        overflow-X: scroll;
+        gap: 1rem;
+        
+        
+      }
+
   .box {
     @include border-radius;
     @include  background;
@@ -13,12 +28,24 @@
       transform: scale(1.05);
     }
 
+    @include respond(m){
+      
+      height: 10%;
+      
+    }
+
     &__icon {
       font-size: size(main);
       margin-bottom: 3rem;
       display: inline-block;
       padding: 0.5rem 1rem;
       @include border-radius;
+
+      @include respond(l){
+      
+        font-size: size(small);
+        
+          }
 
       &--1 {
         background-color: rgba(color(red-2), 0.1);
@@ -52,7 +79,19 @@
       font-weight: 500;
       span {
         font-size: size(small);
+
+        @include respond(m){
+          font-size: size(thin);
+          
+        }
       }
+
+      @include respond(m){
+        font-size: size(thin);
+        
+      }
+
+      
     }
 
     &__description {

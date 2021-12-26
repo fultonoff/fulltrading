@@ -4,14 +4,40 @@
   @include flex-center($justify: space-between);
   @include space-down;
   overflow: hidden;
+  height: 90vh;
+  
+
+  @include respond(m){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    height: 100%;
+    
+  }
 
   &__content {
     
-    flex: 1;
+    @include respond(m){
+      margin: 5rem auto;
+      text-align: center;
+    }
     &--title {
       font-size: size(main) * 2.5;
       color: color(white);
       font-weight: 900;
+
+      @include respond(xl){
+        font-size: size(large) * 2.5;
+      }
+
+      @include respond(m){
+        font-size: size(main)* 2;
+        margin: 0;
+      
+        
+      }
     }
 
     &--sub-title {
@@ -19,6 +45,20 @@
       color: color(red-1);
         margin-top: -3rem;
       font-weight: 500;
+
+      
+
+      @include respond(xl){
+        font-size: size(large);
+        margin-top: 1rem;
+      }
+      
+      @include respond(m){
+        font-size: size(large)* 2;
+        margin: 0;
+      
+        
+      }
     }
 
     &--description {
@@ -29,6 +69,10 @@
 
       font-weight: 500;
       margin-bottom: 4rem;
+
+      @include respond(xl){
+        font-size: size(extra-small);
+      }
     }
 
     &--btn{
@@ -59,18 +103,37 @@
   }
 
   &__img {
-    // flex: 1;
-    // transform: scale(1.1);
+    
+    
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 20px;
+    // justify-self: self-end;
+
+
+    img{
+      margin: 0 auto;
+      display: block;
+      @include respond(m){
+        margin-top: 1rem;
+        width: 70%;
+        align-self: center;
+        
+      }
+    }
+    
+    
     &::before {
       z-index: 2000;
       position: absolute;
-      bottom: 0rem;
-      right: 5rem;
-      content: url("/Images/header/Ellipse.png");
+      bottom: -10rem;
+      right: 1rem;
+      content: url("/Images/header/Ellipse 2.png");
+
+      @include respond(m){
+      
+       display: none;
+        
+      }
     }
   }
 }
