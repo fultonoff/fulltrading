@@ -13,12 +13,22 @@
         color: color(white);
         font-size: size(large);
         padding: 2rem 0;
+
+        
 }
 
 .tag-2{
     text-align: left;
     color: color(red-1);
     font-size: size(medium);
+
+    @include respond(m){
+            
+        text-align: center;
+
+        
+        
+      }
 }
 
 .description-2{
@@ -26,4 +36,12 @@
         color: color(white);
         font-size: size(large);
         padding: 2rem 0;
+
+        @include respond(m){
+            
+            text-align: center;
+
+            
+            
+          }
 }

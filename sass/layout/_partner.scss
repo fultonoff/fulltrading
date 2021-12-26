@@ -1,10 +1,15 @@
 .partners {
   @include space-top;
 
+  
+
   .partner {
     @include pageCenter;
     gap: 2rem;
     cursor: pointer;
+    @include respond(m){
+      grid-template-columns: repeat(2, 1fr)
+    }
 
      &__box {
       @include background;

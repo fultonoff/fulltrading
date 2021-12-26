@@ -15,6 +15,8 @@
             width: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
+
             
             
           }
@@ -26,6 +28,8 @@
             justify-content: space-between;
             gap: 2rem;
             flex: 1;
+
+            
             
             .case{
 
@@ -44,7 +48,24 @@
                     color: color(white);
                     margin-bottom: 2rem;
                     width: 50%;
+                    @include respond(m){
+            
+                text-align: center;
+    
+                
+                
+              }
                 }
+
+                @include respond(m){
+            
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+        
+                    
+                    
+                  }
             }
             flex-direction: column;
             &--main{
@@ -54,6 +75,14 @@
                 @include flex-center($justify: space-between);
                 flex-direction: column;
                 gap: 5rem;
+
+                @include respond(m){
+            
+                    order: -1;
+        
+                    
+                    
+                  }
                 
                 padding: 5rem;
 

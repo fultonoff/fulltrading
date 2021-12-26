@@ -1,12 +1,25 @@
 .roadmap-section{
     @include pageCenter;
     @include space-down;
-    
+    @include respond(m){
+            
+        text-align: center;
+        margin: 0 auto; 
+        
+      }
     .roadmap{
         margin-top: 6rem;
         @include flex-center($align: flex-end);
         gap: 4rem;
         width: 100%;
+
+        @include respond(m){
+            
+            flex-wrap: wrap;
+
+            
+            
+          }
 
         &-link{
             @include btn-3;
@@ -38,6 +51,15 @@
                 font-size: size(extra-small);
                 margin-bottom: 3rem;
                 font-weight: 500;
+
+                @include respond(m){
+            
+                    width: 50%;
+                    margin: 0 auto;
+        
+                    
+                    
+                  }
             }
 
             &__img-box{

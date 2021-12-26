@@ -1,8 +1,9 @@
 var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  autoHeight: true,
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 3,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -11,5 +12,6 @@ var swiper = new Swiper(".mySwiper", {
   },
   autoplay: {
     delay: 2500
-  }
+  },
+  
 });
