@@ -2,6 +2,10 @@
     @include flex-center($justify: space-between);
     @include pad;
     height: 7rem;
+    @include respond(m){
+        width: 100%;
+        padding: 0 5rem;
+    }
     // border-bottom: 1px solid rgba(color(white), .1);
     
 
