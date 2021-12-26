@@ -1,39 +1,46 @@
-.our-team{
-    @include space-top;
+.our-team {
+  @include space-top;
 
-    .team{
-        @include pageCenter; 
-        gap: 2rem;
+  .team {
+    @include pageCenter;
+    gap: 2rem;
 
-        .card{
-            @include border-radius;
-            @include background;
-            &__img{
-                height: 10rem;
-                width: 10rem;
-                padding: 1rem .2rem;
-
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    @include border-radius;
-                }
-            }
-
-            &__name{
-                font-size: size(medium);
-                color: color(white);
-                padding-top: 1.5rem;
-            }
-
-            &__role{
-                font-size: size(small);
-                color: rgba(color(white), .47);
-                letter-spacing: 2px;
-                font-weight: 200;
-                
-            }
-        }
+    @include respond(l) {
+      grid-template-columns: repeat(2, 1fr);
     }
+
+    @include respond(m) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+    .card {
+      @include border-radius;
+      @include background;
+      &__img {
+        height: 10rem;
+        width: 10rem;
+        padding: 1rem 0.2rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          @include border-radius;
+        }
+      }
+
+      &__name {
+        font-size: size(medium);
+        color: color(white);
+        padding-top: 1.5rem;
+      }
+
+      &__role {
+        font-size: size(small);
+        color: rgba(color(white), 0.47);
+        letter-spacing: 2px;
+        font-weight: 200;
+      }
+    }
+  }
 }

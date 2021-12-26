@@ -2,7 +2,6 @@
   @include flex-center($justify: space-between);
   @include pageCenter;
   @include space-down;
-
   @include respond(l){
       
     text-align: center;
@@ -14,6 +13,9 @@
         // width: 100%;
         overflow-X: scroll;
         gap: 1rem;
+        width: 100%;
+        
+        
         
         
       }

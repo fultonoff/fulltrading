@@ -3,8 +3,8 @@
   margin: 0 auto;
   @include flex-center($justify: space-between);
   @include space-down;
-  overflow: hidden;
   height: 90vh;
+
   
 
   @include respond(m){
@@ -12,8 +12,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 0;
+    
     height: 100%;
+    width: 100%;
     
   }
 
@@ -106,17 +107,24 @@
     
     
     position: relative;
-    margin-left: 20px;
-    // justify-self: self-end;
+    
+    
 
 
     img{
-      margin: 0 auto;
-      display: block;
+      
+     
+      @include respond(l){
+        margin-top: 1rem;
+        width: 100%;
+        
+        
+      }
+
       @include respond(m){
         margin-top: 1rem;
         width: 100%;
-        align-self: center;
+        
         
       }
     }
@@ -136,4 +144,6 @@
       }
     }
   }
+
+  
 }

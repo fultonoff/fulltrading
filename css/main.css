@@ -38,6 +38,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-X: hidden;
 }
 
 @media (max-width: 62.5em) {
@@ -90,7 +91,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 15rem;
-  overflow: hidden;
   height: 90vh;
 }
 
@@ -109,8 +109,8 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 0;
     height: 100%;
+    width: 100%;
   }
 }
 
@@ -207,21 +207,19 @@ body {
 
 .header__img {
   position: relative;
-  margin-left: 20px;
 }
 
-.header__img img {
-  margin: 0 auto;
-  display: block;
+@media (max-width: 62.5em) {
+  .header__img img {
+    margin-top: 1rem;
+    width: 100%;
+  }
 }
 
 @media (max-width: 50em) {
   .header__img img {
     margin-top: 1rem;
     width: 100%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
 }
 
@@ -251,13 +249,6 @@ body {
           justify-content: space-between;
   padding: 0 10rem;
   height: 7rem;
-}
-
-@media (max-width: 50em) {
-  .nav {
-    width: 100%;
-    padding: 0 5rem;
-  }
 }
 
 .nav__left {
@@ -433,7 +424,7 @@ body {
 @media (max-width: 62.5em) {
   .find-out .find-box__img {
     width: 60%;
-    height: 60%;
+    height: 0%;
   }
 }
 
@@ -485,6 +476,19 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 5rem;
+}
+
+@media (max-width: 50em) {
+  .feature-section .feature {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .feature-section .feature__box {
@@ -943,6 +947,7 @@ body {
   .numbers {
     overflow-X: scroll;
     gap: 1rem;
+    width: 100%;
   }
 }
 
@@ -1103,6 +1108,20 @@ body {
   gap: 2rem;
 }
 
+@media (max-width: 62.5em) {
+  .our-team .team {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 50em) {
+  .our-team .team {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .our-team .team .card {
   border-radius: 0.6rem;
   background: #212429;
@@ -1118,7 +1137,7 @@ body {
 .our-team .team .card__img {
   height: 10rem;
   width: 10rem;
-  padding: 1rem .2rem;
+  padding: 1rem 0.2rem;
 }
 
 .our-team .team .card__img img {
