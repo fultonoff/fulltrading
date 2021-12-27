@@ -11,6 +11,10 @@
       grid-template-columns: repeat(2, 1fr)
     }
 
+    @include respond(s){
+      grid-template-columns: repeat(1, 1fr)
+    }
+
      &__box {
       @include background;
       text-align: center;

@@ -12,6 +12,15 @@
     @include respond(m) {
         grid-template-columns: repeat(2, 1fr);
       }
+      
+      @include respond(s){
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 3rem;
+        
+        
+        
+        
+      }
 
     .card {
       @include border-radius;

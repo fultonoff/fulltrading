@@ -34,11 +34,34 @@
       }
 
       @include respond(m){
-        font-size: size(main)* 2;
+        font-size: size(main)* 3;
         margin: 0;
-      
+        
         
       }
+      
+      @include respond(s){
+        font-size: size(large) * 2;
+        
+        
+  
+        
+        
+        
+      }
+    }
+
+    @include respond(s){
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      padding: 0;
+      margin: 0;
+      
+
+      
+      
+      
     }
 
     &--sub-title {
@@ -55,9 +78,13 @@
       }
       
       @include respond(m){
-        font-size: size(large)* 2;
+        font-size: size(large)* 3;
         margin: 0;
       
+        
+      }
+      @include respond(s){
+        font-size: size(large);
         
       }
     }
@@ -77,6 +104,13 @@
 
       @include respond(m){
         margin: 1rem auto;
+        font-size: size(large);
+      }
+
+      @include respond(s){
+        font-size: size(small);
+        width: 100%;
+        
       }
     }
 
@@ -114,6 +148,14 @@
     @include respond(m){
       display: flex;
       justify-content: center;
+
+      
+      
+      
+    }
+
+    @include respond(s){
+      display: none;
 
       
       

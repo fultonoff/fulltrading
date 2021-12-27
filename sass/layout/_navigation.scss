@@ -3,7 +3,7 @@
     @include pad;
     height: 7rem;
     @include respond(m){
-        
+        padding: .5rem;
     }
     // border-bottom: 1px solid rgba(color(white), .1);
     
@@ -23,6 +23,10 @@
             margin-right: 5rem;
             font-size: size(medium);
             font-weight: 700;
+
+            @include respond(m){
+                font-size: size(large) * 2;
+              }
         }
         
     }
@@ -45,9 +49,14 @@
             @include respond(m){
                 display: block;
             }
-
+            
             i{
+                
                 font-size: size(large);
+                @include respond(m){
+                    font-size: size(large) * 2;
+                  }
+                
             }
 
             .close{

@@ -2,6 +2,18 @@
   @include pageCenter;
   @include space-top;
 
+  @include respond(m){
+            
+    padding: 0 2rem;
+    width: 100%;
+    margin: 0 auto;
+    // text-align: center;
+    margin-top: 5rem;
+
+    
+    
+  }
+
   &-logo {
     text-decoration: none;
     font-size: size(medium);
@@ -13,6 +25,22 @@
     margin-top: 5rem;
     @include space-down;
 
+    @include respond(m){
+            gap: 4rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      
+      
+    }
+
+    @include respond(s){
+grid-template-columns: repeat(1, 1fr);
+
+
+
+}
+
     .connected {
       display: flex;
       flex-direction: column;
@@ -21,6 +49,13 @@
       &__title {
         color: (rgba(color(white), 0.47));
         text-transform: uppercase;
+
+        @include respond(m){
+         font-size: size(large);
+
+    
+    
+  }
       }
 
       &__list{

@@ -17,6 +17,10 @@
         @media (max-width: 50em){
             @content;
         }
-    }
+    }@else if($breakpoint == s){
+        @media (max-width: 37.5em){
+            @content;
+        }
     
+}
 }
